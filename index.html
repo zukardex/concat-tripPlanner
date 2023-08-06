@@ -4,17 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Explorer</title>
+  <title>IV Planner</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Custom CSS -->
-
-
-
-
-
-
-
 
   <style>
     body {
@@ -105,7 +98,7 @@
       transition: opacity 0.3s ease;
     }
     .nav-link:hover {
-        opacity: 0.7; /* You can adjust the value between 0 and 1 (0 = completely transparent, 1 = fully opaque) */
+        opacity: 0.7; 
     }
 
     .jumbotron {
@@ -141,11 +134,11 @@
       margin: 0;
     }
     #dest{
-  display: none; /* Initially hidden */
-  height: 100vh; /* Set a height to make the container vertically scrollable */
+      display: none; /* Initially hidden */
+      height: 100vh; /* to make the container vertically scrollable */
       overflow-y: auto;
-}
-h1 {
+    }
+  h1 {
       font-size: 48px;
       margin-bottom: 20px;
     }
@@ -154,12 +147,12 @@ h1 {
       font-size: 24px;
     }
     .modal.fade .modal-dialog {
-  transition: transform 0.3s ease;
-}
+        transition: transform 0.3s ease;
+      }
 .card-hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
   </style>
   <script>
     function Dest() {
@@ -186,7 +179,6 @@ h1 {
 
     function getCurrentLocation() {
       if ("geolocation" in navigator) {
-        // Geolocation is available
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
       } else {
         alert("Geolocation is not available on this device.");
@@ -194,11 +186,9 @@ h1 {
     }
 
     function successCallback(position) {
-      // Get the latitude and longitude from the position object
       latitude = position.coords.latitude;
       longitude = position.coords.longitude;
 
-      // Use the latitude and longitude variables as needed
       alert("Location stored successfully:\nLatitude: " + latitude + "\nLongitude: " + longitude);
     }
 
@@ -282,28 +272,28 @@ h1 {
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="d.jpg" alt="Destination 1" class="card-img-top img-fluid">
+          <img src="d.jpg" alt="Option 1" class="card-img-top img-fluid">
           <div class="card-body">
             <h5 class="card-title">Option 1</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="card-text">Head towards the right and experience a surprise viewpoint</p>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="de.jpg" alt="Destination 2" class="card-img-top img-fluid">
+          <img src="de.jpg" alt="Option 2" class="card-img-top img-fluid">
           <div class="card-body">
             <h5 class="card-title">Option 2</h5>
-            <p class="card-text">Vestibulum dictum purus nec sapien congue, ac tincidunt nunc pulvinar.</p>
+            <p class="card-text">Go straight for 2km, turn left to reach  Varkala</p>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="des.jpg" alt="Destination 3" class="card-img-top img-fluid">
+          <img src="des.jpg" alt="Option 3" class="card-img-top img-fluid">
           <div class="card-body">
             <h5 class="card-title">Option 3</h5>
-            <p class="card-text">Cras et nulla eu mauris laoreet fringilla eu at orci.</p>
+            <p class="card-text">Have a special dinner from Restaurant X after you return from the destination</p>
           </div>
         </div>
       </div>
@@ -317,8 +307,5 @@ h1 {
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>      </html>
