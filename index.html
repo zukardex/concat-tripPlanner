@@ -174,23 +174,34 @@
 
 
 
-   let latitude;
-    let longitude;
+   
 
-    function getCurrentLocation() {
-      if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-      } else {
-        alert("Geolocation is not available on this device.");
-      }
+  let latitude;
+let longitude;
+
+function getCurrentLocation() {
+  return new Promise((resolve, reject) => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(resolve, reject);
+    } else {
+      reject("Geolocation is not available on this device.");
     }
+  });
+}
 
-    function successCallback(position) {
-      latitude = position.coords.latitude;
-      longitude = position.coords.longitude;
+function successCallback(position) {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
 
-      alert("Location stored successfully:\nLatitude: " + latitude + "\nLongitude: " + longitude);
-    }
+  alert("Location stored successfully:\nLatitude: " + latitude + "\nLongitude: " + longitude);
+}
+
+function errorCallback(error) {
+  alert("Error occurred while getting the location: " + error.message);
+}
+
+getCurrentLocation().then(successCallback).catch(errorCallback);
+
 
 
 
